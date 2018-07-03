@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="css/icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>cPutr - an WebRTC stream Capturer</title>
+</head>
+<body>
+<div class="header">
+  <div class="navigation">
+    <h3 class="brand-name">cPutr</h3>
+  </div>
+</div>
+<div class="container">
+  <video id="video">Stream not available</video>
+  <div class="cam-control">
+    <button id="capture" class="btn material-icons">camera</button>
+    <button id="clear" class="btn red material-icons">delete</button>
+    <button id="show-hide" class="btn material-icons">image</button>
+    <select id="image-filter" class="form-control">
+      <option value="none">Normal</option>
+      <option value="grayscale(100%)">Grayscale</option>
+      <option value="sepia(100%)">Sepia</option>
+      <option value="invert(100%)">Invert</option>
+      <option value="hue-rotate(90deg)">Hue</option>
+      <option value="contrast(200%)">Contrast</option>
+      <option value="blur(2px)">Blur</option>
+    </select>
+  </div>
+  <canvas id="img-canvas"></canvas>
+  <div class="img-container" data-toggle="hide">
+    <div id="img-holder"></div>
+  </div>
+</div>
+<script src="js/main.js" charset="utf-8"></script>
+</body>
+</html>
