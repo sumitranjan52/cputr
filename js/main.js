@@ -31,6 +31,7 @@ function captureImg() {
   var context = canvas.getContext('2d');
   context.drawImage(video, 0, 0, width, height);
   context.font = "16px cursive";
+  context.filter = imgFilter.value;
   context.fillStyle = "#fff";
   context.fillText('cPutr', 20, 20);
   var imgUrl = canvas.toDataURL('image/png');
